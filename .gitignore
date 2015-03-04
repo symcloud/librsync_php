@@ -2,6 +2,9 @@
 *.iml
 .idea
 
+# test
+/test
+
 # Compiled Object files
 *.slo
 *.lo
