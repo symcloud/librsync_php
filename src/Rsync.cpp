@@ -64,6 +64,7 @@ void php_delta_file(Php::Parameters & params) {
     FILE *delta_file;
     delta_file = fopen(params[2], "w+");
 
+    rs_build_hash_table(signature);
     res = rs_delta_file(signature, new_file, delta_file, NULL);
 
     fclose(new_file);
