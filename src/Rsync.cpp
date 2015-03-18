@@ -11,18 +11,10 @@ extern "C" {
  * rs_result rs_sig_file (FILE *old_file, FILE *sig_file, size_t block_len, size_t strong_len, rs_stats_t *)
  */
 void php_sig_file(Php::Parameters & params) {
-    int32_t block_len = 1;
-    int32_t strong_len = 2;
+    // TODO load from ini file
 
-    /* TODO
-    if (params[2] != nullptr) {
-        block_len = params[2];
-    }
-
-    if (params[3] != nullptr) {
-        strong_len = params[3];
-    }
-    */
+    int32_t block_len = 1024;
+    int32_t strong_len = 8;
 
     FILE *old_file;
     old_file = fopen(params[0], "r");
